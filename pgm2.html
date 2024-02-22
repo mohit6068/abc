@@ -1,0 +1,32 @@
+<!--write a program to change font size of a text as per the range control value ranging from 8 to 40  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Font Size Changer</title>
+  <style>
+    #text {
+      font-size: 16px; /* Default font size */
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Font Size Changer</h2>
+
+  <input type="range" id="fontRange" min="8" max="40" value="16" oninput="changeFontSize(this.value)">
+  <span>Font Size: <span id="fontSize">16</span>px</span>
+
+  <p id="text">This is a sample text whose font size will change dynamically.</p>
+
+  <script>
+    function changeFontSize(size) {
+      document.getElementById('text').style.fontSize = size + 'px';
+      document.getElementById('fontSize').textContent = size;
+    }
+  </script>
+
+</body>
+</html>

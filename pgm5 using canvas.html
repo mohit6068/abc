@@ -1,0 +1,32 @@
+<!--Using Canvas Path:-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Triangle</title>
+</head>
+<body>
+
+  <h2>Canvas Triangle</h2>
+
+  <canvas id="myCanvas" width="200" height="200"></canvas>
+
+  <script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(100, 10);
+    ctx.lineTo(40, 190);
+    ctx.lineTo(160, 190);
+    ctx.closePath();
+    ctx.fillStyle = "lime";
+    ctx.fill();
+    ctx.strokeStyle = "purple";
+    ctx.stroke();
+  </script>
+
+</body>
+</html>
